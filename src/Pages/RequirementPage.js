@@ -11,22 +11,27 @@ import {
   Row,
   InputGroup
 } from "react-bootstrap";
+import flight1 from '../images/flight1.jpg';
+import flight2 from '../images/flight3.jpg';
 import Header from "./Header";
 export default class RequirementPage extends Component {
   render() {
     return (
       <div className="headerBody">
+        
         <Header>
-          <div style={{ paddingLeft: "20%", paddingRight: "20%" }}>
+        <br />
+          <div style={{ paddingRight:"20%" ,paddingLeft:"20%" }}>
             <br />
             <div className="bodyColor">
-              <Form>
-               
+              <Form  style={{margin:"2%"}}>
                 {/* -------------------------------------- */}
 
                 <Form.Row>
                   <Form.Group as={Col} md="4" controlId="validationCustom01">
-                    <Form.Label><b>From</b></Form.Label>
+                    <Form.Label>
+                      <b>From</b>
+                    </Form.Label>
                     <Form.Control
                       required
                       type="text"
@@ -38,7 +43,7 @@ export default class RequirementPage extends Component {
                   </Form.Group>
                   <Form.Group as={Col} md="4" controlId="validationCustom02">
                     <Form.Label>
-                    <b>To</b> 
+                      <b>To</b>
                     </Form.Label>
                     <Form.Control
                       required
@@ -54,7 +59,8 @@ export default class RequirementPage extends Component {
                     controlId="validationCustomUsername"
                   >
                     <Form.Label>
-                    <b> Date of Travel</b></Form.Label>
+                      <b> Date of Travel</b>
+                    </Form.Label>
                     <InputGroup>
                       <Form.Control
                         type="Date"
@@ -67,11 +73,11 @@ export default class RequirementPage extends Component {
                 </Form.Row>
 
                 {/* +++++++++++++++++++++++++++++++++++++++++++++ */}
-
-                <fieldset>
-                  <Form.Group as={Row}>
+                
+                <fieldset >
+                  <Form.Group as={Row} >
                     <Form.Label as="legend" column sm={2}>
-                    <b>Type of Flight</b>  
+                      <b>Type of Flight</b>
                     </Form.Label>
                     <Col sm={10}>
                       <Form.Check
@@ -89,10 +95,12 @@ export default class RequirementPage extends Component {
                     </Col>
                   </Form.Group>
                 </fieldset>
+                
                 {/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */}
-                <Form.Group as={Row} controlId="exampleForm.ControlSelect2">
+                
+                <Form.Group as={Row} controlId="exampleForm.ControlSelect2" >
                   <Form.Label column sm={2}>
-                   <b> Transport Type</b>
+                    <b> Transport Type</b>
                   </Form.Label>
                   <Col sm={10}>
                     <Form.Control as="select" multiple>
@@ -102,14 +110,15 @@ export default class RequirementPage extends Component {
                   </Col>
                 </Form.Group>
               </Form>
+              
 
               {/* ___________________________________ */}
 
-              <Form>
+              <Form style={{margin:"2%"}}>
                 <fieldset>
                   <Form.Group as={Row}>
                     <Form.Label as="legend" column sm={2}>
-                     <b> Class</b>
+                      <b> Class</b>
                     </Form.Label>
                     <Col sm={10}>
                       <Form.Check
@@ -134,31 +143,73 @@ export default class RequirementPage extends Component {
                   </Form.Group>
                 </fieldset>
 
-                {/* ---------------------------------- */}
+                {/* ---------------------------------- */} 
 
-                <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-                  <Form.Label column sm={2}>
-                   <b> Category</b>
-                  </Form.Label>
-                  <Col sm={10}>
+                <Form.Row>
+                  <Form.Group as={Col} md="4" controlId="ageInfant">
+                    <Form.Label>
+                      <b>Infant</b>
+                    </Form.Label>
+
                     <Form.Control as="select">
-                      <option>Infant [0-2]</option>
-                      <option>Children [2-12]</option>
-                      <option>Adult [Above 12]</option>
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
                     </Form.Control>
-                  </Col>
-                </Form.Group>
+
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                  </Form.Group>
+                  <Form.Group as={Col} md="4" controlId="ageChildren">
+                    <Form.Label>
+                      <b>Children</b>
+                    </Form.Label>
+                    <Form.Control as="select">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </Form.Control>
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                  </Form.Group>
+                  <Form.Group as={Col} md="4" controlId="ageAdult">
+                    <Form.Label>
+                      <b> Adult</b>
+                    </Form.Label>
+                    <InputGroup>
+                    <Form.Control as="select">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </Form.Control>
+                    </InputGroup>
+                  </Form.Group>
+                </Form.Row>
               </Form>
 
               <div className="centerStyle">
                 <button style={{ backgroundColor: "rgb(60, 179, 113)" }}>
-                 <b>Search</b>  <i class="material-icons">flight</i>
+                  <b>Search</b> <i class="material-icons">flight</i>
                 </button>
               </div>
-              <br/>
+              <br />
             </div>
           </div>
+          
         </Header>
+
+
+
+
+
+        
       </div>
     );
   }
