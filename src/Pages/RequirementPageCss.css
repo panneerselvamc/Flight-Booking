@@ -1,0 +1,21 @@
+
+
+.centerStyle{
+    text-align:center;
+    
+}
+.headerBody{
+    background: url("C:/Users/pselvam6400/Desktop/Flight Booking/flight_booking/src/images/beach.jpg");
+    
+    position: fixed; 
+  top: 0; 
+  left: 0; 
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bodyColor{
+    background: #00bfff;
+    /* background-color: "#0b062b"; */
+    border-style: groove;
+}

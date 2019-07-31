@@ -1,25 +1,22 @@
-import React from "react";
-import HomePage from "./Pages/HomePage";
-import RequirementPage from "./Pages/RequirementPage";
+import React, { Component } from 'react'
 import {
-  Button,
-  FormControl,
-  Form,
-  Nav,
-  Navbar,
-  Carousel
-} from "react-bootstrap";
-
-function App() {
-  return (
-  
-    <div>
+    Button,
+    FormControl,
+    Form,
+    Nav,
+    Navbar,
+    Carousel
+  } from "react-bootstrap";
+export default class Header extends Component {
+    render() {
+        return (
+            <div>
       <div>
         <Navbar bg="dark" variant="dark">
           <b style={{ color: "white" }}>Fight Booking System</b>
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/#bookaflight">Book a Flight</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/bookaflight">Book a Flight</Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -35,11 +32,10 @@ function App() {
         </Navbar>
       </div>
       
-      {/* <HomePage/> */}
-      {/* <RequirementPage /> */}
-    </div>
-    
-  );
-}
+   
 
-export default App;
+      {this.props.children}
+    </div>
+        )
+    }
+}
